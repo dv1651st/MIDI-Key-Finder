@@ -1,0 +1,10 @@
+            string fileName;
+            OpenFileDialog loadFile = new OpenFileDialog();
+            if (loadFile.ShowDialog() == DialogResult.OK)
+            {
+                fileName = loadFile.FileName;
+                //MessageBox.Show(fileName);
+                var myChords = Midi.getChordsFromMIDI(fileName);
+                Key myKey = new Key(myChords);
+
+            }
